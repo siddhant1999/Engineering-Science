@@ -109,7 +109,7 @@ class LineFit():
 	def resid(self):
 		res = []
 		for i in range(self.samples):
-			res += [(self.x[i] *self.m() + self.b())-self.y[i]]
+			res += [self.y[i]-(self.x[i] *self.m() + self.b())]
 
 		return res
 
